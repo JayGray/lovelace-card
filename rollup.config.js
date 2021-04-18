@@ -1,11 +1,11 @@
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
-import serve from 'rollup-plugin-serve';
+import { terser } from 'rollup-plugin-terser';
 
 export default {
     input: ['src/card.js'],
     output: {
-        dir: './dist',
+        dir: './',
         format: 'es',
     },
     plugins: [
@@ -13,13 +13,9 @@ export default {
         babel({
             exclude: 'node_modules/**',
         }),
-        serve({
-            contentBase: './dist',
-            host: '0.0.0.0',
-            port: 5000,
-            allowCrossOrigin: true,
-            headers: {
-                'Access-Control-Allow-Origin': '*',
+        terser({
+            format: {
+                comments: false,
             },
         }),
     ],
