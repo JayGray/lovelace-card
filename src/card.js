@@ -80,7 +80,6 @@ class HavagCard extends LitElement {
         this.nearbyStations = this._getNearbyStations();
 
         this._pollDepartures();
-        console.log(this.nearbyStations);
     }
 
     async _getMetadata() {
