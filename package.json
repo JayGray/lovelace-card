@@ -11,6 +11,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
+    "lodash-es": "^4.17.21",
     "prettier": "^2.2.1",
     "rollup": "^2.45.2",
     "rollup-plugin-serve": "^1.1.0",
