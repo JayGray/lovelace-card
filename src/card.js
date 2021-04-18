@@ -82,6 +82,10 @@ class HavagCard extends LitElement {
         this._pollDepartures();
     }
 
+    disconnectedCallback() {
+        window.clearTimeout(this.timeoutId);
+    }
+
     async _getMetadata() {
         try {
             const [lines, stations, platforms] = await Promise.all(
